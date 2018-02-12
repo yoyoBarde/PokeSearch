@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.j.broadcastlisteners.Stop_Watch_Activity">
+
+    <ImageView
+        android:id="@+id/imagePink"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:layout_marginTop="20dp"
+        android:background="#B2497D" />
+
+    <TextView
+        android:id="@+id/timerValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imagePink"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="0:00:000"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imagePink"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/startBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:backgroundTint="@color/Black"
+            android:src="@mipmap/ic_play" />
+
+        <ImageButton
+            android:id="@+id/splitBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape2"
+            android:src="@mipmap/ic_laps" />
+
+        <ImageButton
+            android:id="@+id/resetBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape"
+            android:backgroundTint="#006400"
+            android:src="@mipmap/ic_reset" />
+    </LinearLayout>
+
+
+    <TextView
+
+        android:id="@+id/startTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear1"
+        android:layout_toLeftOf="@+id/timerValue"
+        android:layout_toStartOf="@+id/timerValue"
+        android:text="START"
+        android:textColor="@color/Black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/splitTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/timerValue"
+        android:layout_alignRight="@+id/timerValue"
+        android:layout_below="@+id/linear1"
+        android:layout_marginEnd="39dp"
+        android:layout_marginRight="39dp"
+        android:text="SPLIT"
+        android:textColor="@color/Black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/pauseTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/linear1"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="25dp"
+        android:text="RESET"
+        android:textColor="@color/Black"
+        android:textSize="20dp" />
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/startTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/linear"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

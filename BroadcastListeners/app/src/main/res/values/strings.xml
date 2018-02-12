@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BroadcastListeners</string>
+    <string name="title_activity_timer_">Timer_Activity</string>
+</resources>
