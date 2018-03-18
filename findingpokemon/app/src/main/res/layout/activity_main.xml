@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pokeName_et"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.j.findingpokemon.MainActivity">
+
+
+    <EditText
+        android:id="@+id/pokeSearched_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Search Pokemon" />
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pokeSearched_et"
+        android:text="Search"
+        app:layout_constraintTop_toBottomOf="@+id/pokeSearched_et" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/search_btn">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+
+                android:id="@+id/poke_image"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:layout_centerHorizontal="true"
+
+                />
+
+            <TextView
+
+                android:id="@+id/pokeName_tv"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/poke_image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:text="Pokemon X"
+                android:textColor="#FFFF"
+                android:textSize="18sp" />
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
